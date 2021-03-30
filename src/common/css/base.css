@@ -1,0 +1,438 @@
+
+body,div,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+	font-style: normal;
+	min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #333333;
+  font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  font-size: 16px!important;
+  background: #fff;
+}
+
+/* 去掉 table cell 的边距并让其边重合 */
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+/* ie bug：th 不继承 text-align */
+th {
+  text-align:inherit;
+}
+/* 去除默认边框 */
+fieldset,img {
+  border:none;
+}
+ /* ie6 7 8(q) bug 显示为行内表现 */
+iframe {
+  display:block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym {
+  border:none;
+  font-variant:normal;
+}
+/* 一致的 del 样式 */
+del {
+  text-decoration:line-through;
+}
+address,caption,cite,code,dfn,em,th,var {
+  font-style:normal;
+  font-weight:500;
+}
+/* 去掉列表前的标识，li 会继承 */
+ol,ul {
+  list-style:none;
+}
+/* 对齐是排版最重要的因素，别让什么都居中 */
+caption,th {
+  text-align:left;
+}
+/* 来自yahoo，让标题都自定义，适应多个系统应用 */
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+  text-decoration:underline;
+}
+/* 默认不显示下划线，保持页面简洁 */
+ins,a{
+  color: #333333;
+}
+/* a{
+  text-decoration:none !important;
+} */
+button{
+  outline: none;
+  border: none;
+}
+input{
+  outline: none;
+  border: none;
+  background:no-repeat;
+}
+button::after{ border: none;}
+i{
+	display: inline-block;
+}
+/* 去除 ie6 & ie7 焦点点状线 */
+a:focus,*:focus {
+  outline:none;
+}
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+  overflow:hidden;
+}
+.clearfix {
+  zoom:1; /* for ie6 & ie7*/
+}
+/* 设置显示和隐藏*/
+.hide {
+  display:none;
+}
+.show {
+  display: block;
+}
+.d_ib{
+	display: inline-block;
+}
+/* 布局 */
+.v_t{
+	vertical-align: top;
+}
+.v_m{
+	vertical-align: middle;
+}
+.v_b{
+	vertical-align: bottom;
+}
+.pos_r{position: relative;}
+.pos_a{position: absolute;}
+.pos_f{position: fixed;}
+.div_c{
+	display: flex;
+	align-items: center;
+}
+.j_b{justify-content: space-between;}
+/* 设置浮动，减少浮动带来的 bug */
+.fl {
+  float:left;
+}
+.fr {
+  float:right;
+}
+.t_c{text-align: center;}
+.t_l{text-align: left;}
+.t_r{text-align: right;}
+/*功能*/
+.one_line{white-space: nowrap;/*不换行*/overflow: hidden;text-overflow:ellipsis;/*超出部分文字以...显示*/}
+.two_line{
+	text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.three_line{
+	text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* <div class="loadMore" :class="isLoadOver?'loadMoreOver':'loadMoreTip'"></div> */
+/* if(data.length < 10)this.isLoadOver = true; */
+.loadMore{
+		line-height: 100px;
+		text-align: center;
+		font-size: 26px;
+		color: #999;
+	}
+.loadMoreTip,.loadMoreOver{height:70px;text-align:center;}
+.loadMoreTip:before{content:'加载中...';font-size:20px;color:#cbcbcb;line-height: 60px;}
+.loadMoreOver:before{content:'—— 没有更多了 ——';font-size:20px;color:#cbcbcb;line-height: 60px;}
+.inp-center{display: flex !important;align-items: center;}
+.inp-center input{width: 100% }
+.full{width: 100%;height: 100%;}
+.font_M{font-family: PingFang-SC-Medium;}
+/*常用值*/
+.mt_5{margin-top: 5px;}
+.mt_10{margin-top: 10px;}
+.mt_15{margin-top: 15px;}
+.mt_30{margin-top: 30px;}
+.mt_40{margin-top: 40px;}
+.mt_50{margin-top: 50px;}
+.mt_80{margin-top: 80px;}
+
+
+.mb_5{margin-bottom: 5px;}
+.mb_20{margin-bottom: 20px;}
+.mb_30{margin-bottom: 30px;}
+.mb_40{margin-bottom: 40px;}
+.mb_50{margin-bottom: 50px;}
+.ml_10{margin-left: 10px;}
+.ml_20{margin-left: 20px;}
+.ml_30{margin-left: 30px;}
+.ml_40{margin-left: 40px;}
+.ml_50{margin-left: 50px;}
+.mr_15{margin-right: 15px;}
+.mr_20{margin-right: 20px;}
+.mr_30{margin-right: 30px;}
+.mr_40{margin-right: 40px;}
+.mr_50{margin-right: 50px;}
+
+.pt_10{padding-top: 10px;}
+.pt_15{padding-top: 15px;}
+.pt_20{padding-top: 20px;}
+.pt_30{padding-top: 30px;}
+.pt_40{padding-top: 40px;}
+.pt_50{padding-top: 50px;}
+.pt_80{padding-top: 80px;}
+.pb_10{padding-bottom: 10px;}
+.pb_20{padding-bottom: 20px;}
+.pb_30{padding-bottom: 30px;}
+.pb_40{padding-bottom: 40px;}
+.pb_50{padding-bottom: 50px;}
+.pl_10{padding-left: 10px;}
+.pl_20{padding-left: 20px;}
+.pl_30{padding-left: 30px;}
+.pl_40{padding-left: 40px;}
+.pl_50{padding-left: 50px;}
+.pr_10{padding-right: 10px;}
+.pr_20{padding-right: 20px;}
+.pr_30{padding-right: 30px;}
+.pr_40{padding-right: 40px;}
+.pr_50{padding-right: 50px;}
+
+.fz_15{font-size: 15px;}
+.fz_18{font-size: 18px;}
+.fz_20{font-size: 20px;}
+.fz_22{font-size: 22px;}
+.fz_24{font-size: 24px;}
+.fz_26{font-size: 26px;}
+.fz_28{font-size: 28px;}
+.fz_30{font-size: 30px;}
+.fz_32{font-size: 32px;}
+.fz_34{font-size: 34px;}
+.fz_36{font-size: 36px;}
+.fz_38{font-size: 38px;}
+.fz_40{font-size: 40px;}
+
+.fw_b{font-weight: bold;}
+.fw_7{font-weight: 700;}
+
+.c_00{color: #000;}
+.c_11{color: #111;}
+.c_33{color: #333;}
+.c_66{color: #666;}
+.c_99{color: #999;}
+.c_ff{color: #fff;}
+.c_cc{color: #ccc;}
+
+.bb_0{border-bottom: none;}
+.bl_0{border-left: none;}
+.bt_0{border-top: none;}
+.br_0{border-right: none;}
+
+.bg-ff{background-color: #fff !important;}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */ 
+	color: #999;
+}
+		
+.mask{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(51,51,51,0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 99;
+	overflow: hidden;
+}
+.mask .pop{
+	width: 280px;
+	height: 320px;
+	padding: 193px 20px 0;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	top: -40px;
+	z-index: 101;
+}
+.mask .pop .btn{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	padding: 0 13px;
+}
+.mask .pop .btn>button{
+	width: 91px;
+	height: 30px;
+	color: #146EEB;
+	border: 1px solid #146eeb;
+	background-color: #fff;
+	border-radius: 5px;
+	font-size: 15px;
+}
+.mask .pop .btn>button.complete{
+	background-color: #146EEB;
+	color: #fff;
+}
+.mask .pop .close{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+	
+.pop.one{
+	padding-top: 203px;
+}
+.pop.one .title{
+	font-size: 17px;
+	font-weight: bold;
+}
+.pop.one .btn{
+	margin-top: 25px;
+}
+.input-box{
+	background-color: transparent !important;
+	padding-left: 0 !important;
+	
+}
+.b-btn{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background-color: #146EEB;
+	width: 100%;
+	line-height: 49px;
+	height: 49px;
+	color: #fff;
+	font-size: 17px;
+}
+.hide_far{
+	width: 0;
+	height: 0;
+	opacity: 0;
+	position: fixed;
+	top: -9999px;
+	left: -9999px;
+}
+/* 页面公共样式 */
+/* .main{
+  font-size: 13px;
+  font-family: PingFang SC, PingFang SC-Regular;
+  font-weight: 400;
+  color:#333;
+  padding: 30px 15px;
+  position: relative;
+} */
+.contain_box{
+  width: 100%;
+  height: 100%;
+}
+.bor{
+  width:100%;
+  height: 14px;
+  /* background:url('../../assets/images/login/border.png') no-repeat center;  */
+  background-size: 100% 14px;
+}
+.bor_b{
+  width:100%;
+  height: 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.box{
+  position: absolute;
+  top:37px;
+  background: #fff;
+  width:333px;
+  margin: 0 5px;
+  padding: 15px;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8 8px 0 rgba(0,0,0,0.05);
+}
+.order{
+  color: #1e96fc;
+  font-weight:500;
+}
+.c_red{
+  color: #ff6a6a;
+}
+.dash{
+  width:100%;
+  height: 20px;
+  border-bottom: 2px dashed #f1f1f1;
+}
+.btn{
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 20px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 35px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.btnBox1{
+  position: fixed;
+  bottom:20px;
+}
+.btnBox{
+  width:100%;
+  padding: 0 15px;
+  box-sizing: border-box;  
+  display: flex;
+  justify-content: space-between;
+}
+.cancle{
+  border:1px solid #1e96fc;
+  color:#1e96fc;
+}
+.confirm{
+  border:1px solid #1e96fc;
+  background:#1e96fc ;
+  color:#fff;
+}
+.finished{
+  width:100%;
+  border:1px solid #1e96fc;
+  background:#1e96fc ;
+  color:#fff;
+}
+
+/* 公用 */
+.padd30{
+padding-bottom:120px;
+}
+

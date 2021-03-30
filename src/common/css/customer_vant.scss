@@ -1,0 +1,25 @@
+//统计-月  提现 页面 
+.month-container,.withdrawal-container{
+    $c-primary:#146EEB;
+    $c-light:#999;
+    $c-bg: #f8f8f8;
+    $c-red: #eb1c14;
+    .c-light {
+        color: $c-light;
+    }
+    .c-red{
+        color:$c-red;
+    }
+    .van-picker__cancel{
+        color:#999;
+    }
+    .van-popup--bottom{
+        border-radius: 5px 5px 0 0;
+    }
+    .van-popup--top{
+      top:30px !important
+    }
+    .van-cell:not(:last-child)::after{
+        right:20px;
+    }
+}

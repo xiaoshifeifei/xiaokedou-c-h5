@@ -1,0 +1,38 @@
+/** 弹性布局 **/
+.flex{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  &.middle{ align-items: center; }
+  &.bottom{ align-items: flex-end; }
+  &.stretch{ align-items: stretch; }
+  &.between{ justify-content: space-between; }
+  &.around{ justify-content: space-around; }
+  &.center{ justify-content: center; }
+  &.end{ justify-content: flex-end; }
+  &.wrap{ flex-wrap: wrap; }
+  &.reverse{ flex-direction: row-reverse; }
+  &.column{
+    flex-direction: column;
+    &.reverse{
+      flex-direction: column-reverse;
+    }
+  }
+  &>.stretch{ align-self: stretch; }
+  &>.flex-start{ align-self: flex-start; }
+  &>.flex-end{ align-self: flex-end; }
+  &>.flex-center{ align-self: center; }
+}
+.flex-item{
+  flex: 1;
+  min-width: 0;
+}
+.flex_1{
+  flex: 1;
+}
+.flex-grow{
+  flex-grow: 0;
+}
+.flex-shrink{
+  flex-shrink: 0;
+}
